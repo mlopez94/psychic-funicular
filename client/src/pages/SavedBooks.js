@@ -6,7 +6,7 @@ import {
   Card,
   Button,
 } from "react-bootstrap";
-import { useQuery, useMutation } from "@apollo/react-hooks";
+import { useQuery, useMutation } from "@apollo/client";
 import { REMOVE_BOOK } from "../utils/mutations";
 import Auth from "../utils/auth";
 import { removeBookId } from "../utils/localStorage";
@@ -26,13 +26,11 @@ const SavedBooks = () => {
     }
 
     try {
-      const { data } = await removeBook({
+      await removeBook({
         variables: { bookId },
       });
 
-      if (error) {
-        throw new Error("something went wrong!");
-      }
+      
 
       // upon success, remove book's id from localStorage
       removeBookId(bookId);
