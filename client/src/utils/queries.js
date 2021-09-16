@@ -9,11 +9,11 @@ export const QUERY_ME = gql`
       bookCount
       savedBooks {
         bookId
-        image
         authors
         description
-        title
+        image
         link
+        title
       }
     }
   }
