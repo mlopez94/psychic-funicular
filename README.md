@@ -18,7 +18,8 @@ SO THAT I can keep a list of books to purchase
   * [Questions](#questions)
 
   ## Installation
-  You will have to install node.js to run the app. This portfolio project was created using REACT.
+  You will have to install node.js to run the app. This project was created using REACT. Once node is installed, cd into both client and server folders to install graphQL.<br />
+  At the root, npm install concurrently to run.
 
   ## Usage
   For project creation
